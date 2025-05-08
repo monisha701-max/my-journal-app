@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: burlywood;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      padding: 20px;
+      background-color: #b17559;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .main-content img {
+      max-width: 350px;
+      border-radius: 12px;
+      margin-right: 40px;
+    }
+
+    .hero {
+      max-width: 500px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #880e03;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #ff8c84;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      flex: 1;
+      padding-bottom: 20px;
+    }
+    .footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #d9a07f;
+      /* match your theme */
+      color: #333;
+    }
+
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-content img {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      .quote {
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #800080;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo" style="padding: 20px 0 0 20px;">MY JOURNAL</div>
+    <nav>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Log In</a>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <div>
+      <img src="https://i.pinimg.com/736x/bf/b3/75/bfb37562dd003b1bfe9d559b3a3a5b58.jpg" alt="Journal Illustration" />
+      <br />
+      <h3 class="quote">find the joy in the journey🤍</h3>
+    </div>
+
+    <div class="hero">
+      <h1> Unleash Your Mind💬 </h1>
+      <p>express your thoughts!</p>
+      <a href="journal.html"><button>Start Journaling</button></a>
+      <a href="features.html"><button>Explore Features</button></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 JournalApp | Privacy
+  </footer>
+
+
+</body>
+
+</html>

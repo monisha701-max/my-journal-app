@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Switcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff7f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: none;
+    }
+
+    .card img.active {
+      display: block;
+    }
+
+    .source {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      background-color: #d3826c;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #b76955;
+    }
+
+    code {
+      display: block;
+      margin-top: 5px;
+      background-color: #f2f2f2;
+      padding: 6px;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <img src="https://i.pinimg.com/736x/ec/f4/93/ecf493def03f7f065c5e23f7d448b774.jpg" alt="Pinterest Image" class="active" data-url="https://www.pinterest.com/pin/123456789012345678/">
+  <img src="https://i.pinimg.com/736x/e6/fe/53/e6fe53f6894344297845b486d83039b4.jpg" alt="Pinterest Image" data-url="https://www.pinterest.com/pin/223456789012345678/">
+  <img src="https://i.pinimg.com/736x/a4/5f/08/a45f084a3882d0a7c64aec365ff15e74.jpg" alt="Pinterest Image" data-url="https://www.pinterest.com/pin/323456789012345678/">
+  <img src="https://i.pinimg.com/736x/c0/e2/bd/c0e2bd45cce00115c2d9cff65645163e.jpg" alt="Pinterest Image" data-url="https://www.pinterest.com/pin/423456789012345678/">
+
+  <div class="source">
+    Image Source:
+    <code id="pinterest-code">https://www.pinterest.com/pin/123456789012345678/</code>
+  </div>
+
+  <button onclick="openPinterestLink()">Go to Pinterest</button>
+  <button onclick="backToHome()">Back to Home</button>
+</div>
+
+<script>
+  const images = document.querySelectorAll('.card img');
+  const codeDisplay = document.getElementById('pinterest-code');
+  let current = 0;
+
+  function updateLink(index) {
+    const url = images[index].getAttribute('data-url');
+    codeDisplay.textContent = url;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+      updateLink(current);
+    }
+  });
+
+  function openPinterestLink() {
+    const url = codeDisplay.textContent;
+    window.open(url, "_blank");
+  }
+
+  function backToHome() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

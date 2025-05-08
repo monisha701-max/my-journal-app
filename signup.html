@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, burlywood,brown );
+            font-family: Arial, sans-serif;
+        }
+
+        .signup-box {
+            background-color: rgb(199, 127, 85);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(13, 3, 3, 0.15);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .signup-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .signup-box input[type="text"],
+        .signup-box input[type="email"],
+        .signup-box input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .signup-box button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #572906;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-box button:hover {
+            background-color: #c66702;
+        }
+        h1{
+            color:#572906
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h1>Create an Account</h1>
+        <form id="signupForm">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            window.location.href = "journal.html"; 
+        });
+    </script>
+</body>
+</html>

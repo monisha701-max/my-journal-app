@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main button:hover {
+  background-color: #690202;
+}
+h1, h2 {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  text-shadow: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffffaa;
+  backdrop-filter: blur(10px);
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff5722;
+}
+main {
+  max-width: 800px;
+  margin: 4rem auto;
+  background-color: #ffffffcc;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+
+  <main>
+    <h2>Mood Tracker</h2>
+    <p>Track your daily mood and improve your mental wellness.</p>
+    <label for="mood">How are you feeling today?</label>
+    <select id="mood" name="mood">
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="neutral">Neutral</option>
+      <option value="angry">Angry</option>
+      <option value="excited">Excited</option>
+    </select>
+    <button onclick="alert('Mood Saved!')">Save Mood</button>
+    <p>Your mood will be recorded for today!</p>
+  </main>
+
+
+</body>
+</html>
